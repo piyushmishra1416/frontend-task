@@ -68,7 +68,6 @@ import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
-import koinxlogo1 from "../assets/koinxlogo1.jpg";
 import KoinXLogo from "../assets/KoinXLogo.svg";
 import { Link } from "react-router-dom";
 
