@@ -1,61 +1,3 @@
-// // import React from "react";
-
-// export const Frame = (): JSX.Element => {
-//   return (
-//     <div className="relative w-[1440px] h-[80px] bg-white border-b [border-bottom-style:solid] border-[#dedfe2]">
-//       <div className="inline-flex h-[72px] items-center gap-[72px] absolute top-[4px] left-[60px]">
-//         <div className="relative w-[96px] h-[24px]">
-//           <div className="relative w-[95px] h-[21px] top-[2px]">
-//             <div className="absolute w-[6px] h-[6px] top-0 left-[35px]">
-//               <div className="relative w-[4px] h-[4px] top-px left-px bg-[url(union.svg)] bg-[100%_100%]">
-//                 <img className="absolute w-[4px] h-[4px] top-0 left-0" alt="Vector" src="vector.svg" />
-//               </div>
-//             </div>
-//             <img className="absolute w-[4px] h-[4px] top-px left-[36px]" alt="Vector" src="image.svg" />
-//             <img className="absolute w-[95px] h-[20px] top-px left-0" alt="Group" src="group-27340.png" />
-//           </div>
-//         </div>
-//       </div>
-//       <div className="absolute w-[909px] h-[79px] top-0 left-[475px]">
-//         <div className="flex w-[728px] items-center justify-end gap-[32px] absolute top-0 left-0">
-//           <div className="inline-flex h-[79px] items-center justify-center gap-[6px] relative flex-[0_0_auto] bg-white">
-//             <div className="relative w-fit [font-family:'Inter-SemiBold',Helvetica] font-semibold text-gray-1 text-[16px] tracking-[-0.16px] leading-[normal] whitespace-nowrap">
-//               Features
-//             </div>
-//           </div>
-//           <div className="inline-flex h-[70px] items-center justify-center gap-[6px] relative flex-[0_0_auto] bg-white">
-//             <div className="relative w-fit [font-family:'Inter-SemiBold',Helvetica] font-semibold text-gray-1 text-[16px] tracking-[-0.16px] leading-[normal] whitespace-nowrap">
-//               Exchanges
-//             </div>
-//           </div>
-//           <div className="inline-flex h-[70px] items-center justify-center gap-[6px] relative flex-[0_0_auto] bg-white">
-//             <div className="relative w-fit [font-family:'Inter-SemiBold',Helvetica] font-semibold text-gray-1 text-[16px] tracking-[-0.16px] leading-[normal] whitespace-nowrap">
-//               How it Works?
-//             </div>
-//           </div>
-//           <div className="relative w-[34px] h-[70px] bg-white">
-//             <div className="absolute top-[20px] left-0 [font-family:'Inter-SemiBold',Helvetica] font-semibold text-gray-1 text-[16px] tracking-[-0.16px] leading-[normal] whitespace-nowrap">
-//               Blog
-//             </div>
-//           </div>
-//           <div className="inline-flex h-[70px] items-center justify-center gap-[6px] relative flex-[0_0_auto] bg-white">
-//             <div className="relative w-fit [font-family:'Inter-SemiBold',Helvetica] font-semibold text-gray-1 text-[16px] tracking-[-0.16px] leading-[normal] whitespace-nowrap">
-//               About us
-//             </div>
-//           </div>
-//         </div>
-//         <div className="inline-flex h-[70px] items-center justify-center gap-[6px] absolute top-[4px] left-[797px]">
-//           <div className="flex w-[112px] h-[40px] items-center justify-center gap-[8px] p-[8px] relative rounded-[4px] border border-solid border-[#0052fe]">
-//             <div className="relative w-fit [font-family:'Inter-SemiBold',Helvetica] font-semibold text-primaryblue text-[16px] tracking-[-0.16px] leading-[normal] whitespace-nowrap">
-//               Sign In
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// };
-
 
 import React, { useState } from "react";
 import AppBar from "@mui/material/AppBar";
@@ -95,14 +37,14 @@ function ResponsiveAppBar() {
   return (
     <AppBar
       position="relative"
-      className="h-20 w-screen"
+      className="h-20 "
       sx={{
         backgroundColor: "white",
         color: "black",
-        padding: "0.5px 56px 0.5px 60px",
+        padding: "0.03125rem 3.5rem 0.03125rem 3.75rem",
       }}
     >
-      <Container maxWidth="xl">
+      <Container >
         <Toolbar disableGutters>
           <Link to="/">
             <img src={KoinXLogo} alt="logo" className="" />
