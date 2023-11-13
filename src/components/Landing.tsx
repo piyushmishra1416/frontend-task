@@ -8,6 +8,7 @@ import { Box } from "@mui/material";
 import Newsletter from "./Newsletterbox";
 import Signup from "./Signup";
 import FAQSection from "./Faq";
+import Footer from "./Footer";
 
 const Landing = () => {
   const taxrates = [
@@ -382,6 +383,7 @@ const Landing = () => {
     <Box display={{xs: 'none', lg:'flex'}} alignItems={'center'} justifyContent={'center'} sx={{background: 'white'}}>
      <Newsletter />
     </Box>
+    <Footer/>
     </div>
   );
 };
