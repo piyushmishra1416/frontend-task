@@ -1,0 +1,17 @@
+/* styles.module.css */
+.markdown-table {
+   border-collapse: collapse;
+   width: 50%;
+ }
+ 
+ .markdown-table th,
+ .markdown-table td {
+   border: 1px solid #000000;
+   padding: 8px;
+   text-align: center;
+ }
+ 
+ .markdown-table th {
+   background-color: #ffffff;
+ }
+ 

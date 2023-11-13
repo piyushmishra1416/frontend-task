@@ -5,6 +5,7 @@ import arrow from "../assets/arrow.svg";
 import tick from "../assets/tick.svg";
 import { useState } from "react";
 import { Box } from "@mui/material";
+import Newsletter from "./Newsletterbox";
 
 const Landing = () => {
   const taxrates = [
@@ -94,7 +95,8 @@ const Landing = () => {
     console.log("Tax:", taxAmount);
   };
   return (
-    <div className="flex   mt-[29px] w-[100%] bg-[#EFF2F5]   ">
+    <div>
+    <div className="flex   mt-[29px] w-[100%]   ">
       <div className="relative w-[93%] md:w-[61.2%] ml-[10px] md:ml-14 bg-[#FFF] rounded-2xl items-center flex flex-col md:py-[2.5%] px-4 py-4 md:px-[5.4%]">
         <div className="items-center w-[100%] justify-center  flex">
           <p className="  font-inter font-bold justify-center text-center items-center text-2xl md:text-4xl leading-10">
@@ -365,6 +367,9 @@ const Landing = () => {
           </Button>
         </div>
       </Box>
+
+    </div>
+    <Newsletter />
     </div>
   );
 };
