@@ -7,6 +7,7 @@ import { useState } from "react";
 import { Box } from "@mui/material";
 import Newsletter from "./Newsletterbox";
 import Signup from "./Signup";
+import FAQSection from "./Faq";
 
 const Landing = () => {
   const taxrates = [
@@ -369,11 +370,18 @@ const Landing = () => {
           </Button>
         </div>
       </Box>
-      <Signup/>
+   
     
 
     </div>
     {/* <Newsletter /> */}
+    <div className="relative w-[93%] md:w-[61.2%] ml-[10px] mt-5 md:ml-14 bg-[#FFF] rounded-2xl items-center flex flex-col md:py-[2.5%] px-4 py-4 md:px-[5.4%]">
+    <FAQSection />
+    </div>
+    <Signup/>
+    <Box display={{xs: 'none', lg:'flex'}} alignItems={'center'} justifyContent={'center'} sx={{background: 'white'}}>
+     <Newsletter />
+    </Box>
     </div>
   );
 };

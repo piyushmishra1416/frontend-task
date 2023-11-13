@@ -30,19 +30,19 @@ export const calculateCapitalGains = (
 //  };
  export const calculateTax = (
    netCapitalGains: number,
-   annualIncome: number
+   incomePosition: number
  ) => {
    let taxRateIndex = 0;
  
-   if (annualIncome === 0) {
+   if (incomePosition === 0) {
      taxRateIndex = 0;
      
-   } else if (annualIncome === 1) {
+   } else if (incomePosition === 1) {
      taxRateIndex = 1;
      
-   } else if (annualIncome === 2) {
+   } else if (incomePosition === 2) {
      taxRateIndex = 2;
-   } else if (annualIncome === 3) {
+   } else if (incomePosition === 3) {
      taxRateIndex = 3;
    } else {
      taxRateIndex = 4;

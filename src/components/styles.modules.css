@@ -1,4 +1,8 @@
 /* styles.module.css */
+
+.markdown{
+   margin-bottom: 16px;
+}
 .markdown-table {
    border-collapse: collapse;
    width: 50%;
@@ -14,4 +18,6 @@
  .markdown-table th {
    background-color: #ffffff;
  }
+
+ 
  

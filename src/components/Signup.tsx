@@ -18,7 +18,7 @@ const Signup = () => {
           <img src={Frame} className="mx-auto " alt="frame" />
         </div>
         <div className="w-[83%] mx-auto text-center flex flex-col justify-center items-center">
-          <p className="fixed[font-family:'Inter-Bold',Helvetica] font-bold text-white w-72 h-20 text-[24px]  ">
+          <p className="fixed[font-family:'Inter-Bold',Helvetica] font-bold text-white w-72  text-[24px]  ">
           Track your portfolio & taxes
           </p>
           <p className="  text-white mt-4  h-16 w- text-[14px]  ">
