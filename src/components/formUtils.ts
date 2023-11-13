@@ -34,15 +34,15 @@ export const calculateCapitalGains = (
  ) => {
    let taxRateIndex = 0;
  
-   if (annualIncome = 0) {
+   if (annualIncome === 0) {
      taxRateIndex = 0;
      
-   } else if (annualIncome = 1) {
+   } else if (annualIncome === 1) {
      taxRateIndex = 1;
      
-   } else if (annualIncome = 2) {
+   } else if (annualIncome === 2) {
      taxRateIndex = 2;
-   } else if (annualIncome = 3) {
+   } else if (annualIncome === 3) {
      taxRateIndex = 3;
    } else {
      taxRateIndex = 4;

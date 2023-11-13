@@ -1,4 +1,10 @@
 // faqData.js
+
+interface faqData {
+   question: string;
+   answer: string;
+ }
+ 
 const faqData = [
    {
        question: "1. How are cryptocurrencies taxed in Australia?",

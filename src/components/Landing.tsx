@@ -6,6 +6,7 @@ import tick from "../assets/tick.svg";
 import { useState } from "react";
 import { Box } from "@mui/material";
 import Newsletter from "./Newsletterbox";
+import Signup from "./Signup";
 
 const Landing = () => {
   const taxrates = [
@@ -96,7 +97,7 @@ const Landing = () => {
   };
   return (
     <div>
-    <div className="flex   mt-[29px] w-[100%]   ">
+    <div className="flex flex-col md:flex-row   mt-[29px] w-[100%]   ">
       <div className="relative w-[93%] md:w-[61.2%] ml-[10px] md:ml-14 bg-[#FFF] rounded-2xl items-center flex flex-col md:py-[2.5%] px-4 py-4 md:px-[5.4%]">
         <div className="items-center w-[100%] justify-center  flex">
           <p className="  font-inter font-bold justify-center text-center items-center text-2xl md:text-4xl leading-10">
@@ -336,19 +337,19 @@ const Landing = () => {
         sx={{}}
         display={["none", "flex"]}
         flexDirection={"column"}
-        className="w-[26.625rem] hidden sm:block h-[36rem] ml-5 rounded-2xl bg-primary-blue px-4 py-14 "
+        className="w-[29.6%] hidden sm:block h-[36rem] ml-5 rounded-2xl bg-primary-blue px-4 py-14 "
       >
-        <div className="w-64 mx-auto text-center flex flex-col justify-center items-center">
+        <div className="w-[83%] mx-auto text-center flex flex-col justify-center items-center">
           <p className="fixed[font-family:'Inter-Bold',Helvetica] font-bold text-white w-72 h-20 text-[24px]  ">
             Get Started with KoinX for FREE
           </p>
-          <p className="  text-white mt-4  h-16 w-80 text-[14px]  ">
+          <p className="  text-white mt-4  h-16 w- text-[14px]  ">
             With our range of features that you can equip for free, KoinX allows
             you to be more educated and aware of your tax reports.
           </p>
         </div>
-        <div className="mt-9 ">
-          <img src={Frame} className="items-center mx-auto" alt="frame" />
+        <div className="mt-9 w-[100%] flex justify-center items-center">
+          <img src={Frame} className="mx-auto " alt="frame" />
         </div>
         <div className="mt-9 text-center">
           <Button
@@ -359,17 +360,20 @@ const Landing = () => {
               textTransform: "none",
               fontWeight: 550,
               padding: "8px 24px",
+              fontSize: "16px"
             }}
-            className="mx-auto"
+            className=""
             endIcon={<img src={arrow} alt="Arrow" />}
           >
             Get Started for FREE
           </Button>
         </div>
       </Box>
+      <Signup/>
+    
 
     </div>
-    <Newsletter />
+    {/* <Newsletter /> */}
     </div>
   );
 };
