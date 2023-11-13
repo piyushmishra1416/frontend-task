@@ -3,7 +3,7 @@ import Button from "@mui/material/Button";
 import Frame from "../assets/Frame.svg";
 import arrow from "../assets/arrow.svg";
 import tick from "../assets/tick.svg";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Box } from "@mui/material";
 import Newsletter from "./Newsletterbox";
 import Signup from "./Signup";
@@ -35,7 +35,7 @@ const Landing = () => {
   const [purchasePrice, setPurchasePrice] = useState<string>("");
   const [salePrice, setSalePrice] = useState<string>("");
   const [expenses, setExpenses] = useState<string>("");
-  const [investmentType, setInvestmentType] = useState<string>("Long Term");
+  const [investmentType, setInvestmentType] = useState<string>("");
   const [capitalGainsValue, setCapitalGainsValue] = useState<number | null>(
     null
   );
@@ -51,7 +51,7 @@ const Landing = () => {
     const newIndex = incomes.indexOf(selectedIncome);
    
     setIndex(newIndex);
-    handleSubmit(e);
+    handleSubmit();
   }; // State to store the selected financial year
 
   const financials = [" FY 2023-24"]; // Add more financial years as needed
@@ -64,8 +64,8 @@ const Landing = () => {
     setSelectedCountry(e.target.value);
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault();
+  const handleSubmit = () => {
+   
 
     const parsedpurchasedPrice = parseFloat(purchasePrice);
     const parsedsalePrice = parseFloat(salePrice);
@@ -99,6 +99,9 @@ const Landing = () => {
     console.log("Net Capital Gains:", netCapitalGains);
     console.log("Tax:", taxAmount);
   };
+  useEffect(() => {
+    handleSubmit()
+  }, [annualIncome])
   return (
     <div>
     <div className="flex flex-col md:flex-row   mt-[29px] w-[100%]   ">
@@ -227,31 +230,34 @@ const Landing = () => {
                   <button
                     id="pprice"
                     className="w-[100%] h-[3.5rem] border px-[0.75rem] flex items-center border-gray-300 rounded-lg "
-                    onClick={() => setInvestmentType("Short Term")}
+                    onClick={(e) => { e.preventDefault() 
+                      setInvestmentType("Short Term")}}
                   >
                     {" "}
                     <p>Short Term</p>
-                    <img
+                    {investmentType == 'Short Term' && <img
                       src={tick}
-                      alt="tick" 
+                      alt="tick"
                       className="w-[2rem] h-[2rem] ml-[0.25rem]"
-                    />
+                    />}
                   </button>
                   <p> &lt; 12 months </p>
                 </div>
                 <div className="w-[100%]">
                   <button
                     id="pprice"
-                    className="w-[100%] h-[3.5rem] border flex items-center border-gray-300 rounded-lg px-[0.75rem]"
-                    onClick={() => setInvestmentType("Long Term")}
+                    className="w-[100%] h-[3.5rem] border flex items-center  border-gray-300 rounded-lg px-[0.75rem]"
+                    onClick={(e) => { e.preventDefault() 
+                      setInvestmentType("Long Term")}}
+                    
                   >
                     {" "}
                     <p>Long Term</p>
-                    <img
+                    {investmentType == 'Long Term' && <img
                       src={tick}
                       alt="tick"
                       className="w-[2rem] h-[2rem] ml-[0.25rem]"
-                    />
+                    />}
                   </button>
                   <p className="text-[0.9375remw]"> &gt; 12 months </p>
                 </div>
