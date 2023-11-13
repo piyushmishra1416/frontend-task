@@ -24,30 +24,27 @@ export const calculateCapitalGains = (
    return capitalGains - discount;
  };
  
-//  export const calculateTax = (netCapitalGains: number, taxRateIndex: number) => {
-//    const taxRate = parseFloat(taxrates[taxRateIndex].replace('%', '')) / 100;
-//    return netCapitalGains * taxRate;
-//  };
+
  export const calculateTax = (
    netCapitalGains: number,
    incomePosition: number
  ) => {
    let taxRateIndex = 0;
  
-   if (incomePosition === 0) {
+   if (incomePosition == 0) {
      taxRateIndex = 0;
      
-   } else if (incomePosition === 1) {
+   } else if (incomePosition == 1) {
      taxRateIndex = 1;
      
-   } else if (incomePosition === 2) {
+   } else if (incomePosition == 2) {
      taxRateIndex = 2;
-   } else if (incomePosition === 3) {
+   } else if (incomePosition == 3) {
      taxRateIndex = 3;
    } else {
      taxRateIndex = 4;
    }
- 
+  console.log(taxRateIndex)
    const taxRate = taxRates[taxRateIndex];
    const initialTaxAmount = initialTaxAmounts[taxRateIndex];
    const additionalTax = netCapitalGains * taxRate;

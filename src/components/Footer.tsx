@@ -7,7 +7,7 @@ import YouTubeIcon from "@mui/icons-material/YouTube";
 import KoinXLogo from "../assets/KoinXLogo.svg";
 function Footer() {
   return (
-    <div className="h-full  flex flex-col md:  text-white bg-[#000000] ">
+    <div className="h-full  flex flex-col md:  text-white bg-[#000000] mt-6 ">
       <div className="flex flex-col gap-[60%] md:flex-row mt-10 mx-10 ">
         <img src={KoinXLogo} alt="logo" className="ml-10 md:mr-0" />
         <div className="flex space-x-4 justify-center ">
@@ -20,7 +20,7 @@ function Footer() {
         </div>
       </div>
       <hr className="mt-10 mx-auto border-white w-3/4 mb-4" />
-      <div className="grid text-base grid-cols-5 font-light  mt-14 px-28">
+      <div className="grid text-base grid-cols-2 md:grid-cols-5 grid-rows-2  md:grid-rows-1 m font-light  mt-14 px-28">
         <div className="">
           <ul className="text-lg  ">
             <li className="mb-2 font-bold">Crypto Taxes for</li>

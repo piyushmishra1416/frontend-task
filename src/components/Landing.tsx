@@ -46,9 +46,10 @@ const Landing = () => {
   const handleAnnualIncomeChange = (
     e: React.ChangeEvent<HTMLSelectElement>
   ) => {
+    setAnnualIncome(e.target.value);
     const selectedIncome = e.target.value;
     const newIndex = incomes.indexOf(selectedIncome);
-    setAnnualIncome(selectedIncome);
+   
     setIndex(newIndex);
     handleSubmit(e);
   }; // State to store the selected financial year
@@ -91,6 +92,7 @@ const Landing = () => {
     setTaxAmount(taxAmount);
 
     // Now you can use the calculated values as needed in your application
+    console.log(annualIncome,typeof annualIncome)
     console.log(incomePosition);
     console.log("Capital Gains:", capitalGains);
     console.log("Discount:", discount);
@@ -288,8 +290,9 @@ const Landing = () => {
                 ))}
               </select>
             </div>
-            <div className="flex flex-col w-[50%]  items-start md:justify-center md:text-center gap-[0.375rem] ">
-              <p className=" text-center ">{index !== -1 && taxrates[index]}</p>
+            <div className="flex flex-col w-[50%]  items-start  md:items-center md:justify-center md:text-center gap-[0.375rem] ">
+              <p className="md:pt-2">Tax Rate</p>
+              <p className=" text-center  "> {index !== -1 && taxrates[index]}</p>
             </div>
           </div>
           <div
