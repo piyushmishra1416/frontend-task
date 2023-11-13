@@ -47,7 +47,7 @@ function ResponsiveAppBar() {
       <Container >
         <Toolbar disableGutters>
           <Link to="/">
-            <img src={KoinXLogo} alt="logo" className="" />
+            <img src={KoinXLogo} alt="logo" className="mr-48 md:mr-0" />
           </Link>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
